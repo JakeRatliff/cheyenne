@@ -1,0 +1,16 @@
+<h1>Word Data</h1>
+<a href="{% url 'home' %}"><button>New Count</button></a>
+<p>Your text: {{fulltext}}</p>
+<p>Word Count: {{count}}</p>
+<p>Characters: {{characters}}</p>
+<div>
+
+	Word List: 
+	<br/>
+	<br/>
+	{% for word, count in worddictionary %}
+		{{word}}: {{count}}
+		<br/>
+	{% endfor %}
+
+</div>
